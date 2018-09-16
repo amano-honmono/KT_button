@@ -1,10 +1,14 @@
+# -*- coding: utf-8 -*-
+
 from bottle import route, run
+import generator
 
-@route('/'):
+@route('/')
+def top():
+    return generator.top()
+
+@route('/login')
+def login():
     pass
 
-@route('/login'):
-    pass
-
-def __main__:
-    run(host='0.0.0.0', port=80)
+run(host='0.0.0.0', port=80)
